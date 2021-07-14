@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #000;
+  padding: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav div .logo {
+  padding-right: 5rem;
+}
+
+nav div .logo p {
+  font-size: 1.6rem;
+  color: red;
+  font-weight: bold;
+}
+
+nav div .nav_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav div .nav_links .nav_items {
+  padding-right: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav div .nav_links .nav_items a {
+  color: #fff;
+}
+
+.nav_items {
+  position: relative;
+}
+
+.nav_items ul {
+  display: none;
+  position: absolute;
+}
+
+.nav_items ul li {
+  padding: 0.8rem;
+  border-bottom: 1px solid #fff;
+  padding-top: 1rem;
+  background-color: #000;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.nav_items ul li a {
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav_items:hover ul {
+  display: block;
+}
+
+.nav_items:hover i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.btn {
+  cursor: pointer;
+  color: #fff;
+  background: red;
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.toggole {
+  display: none;
+}
+
+@media screen and (max-width: 993px) {
+  nav div .toggole {
+    z-index: 1;
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  nav div .nav_links {
+    height: 100%;
+    margin: 0;
+    width: 200px;
+    padding-top: 4rem;
+    background: #000;
+    position: absolute;
+    display: block;
+    display: none;
+  }
+  nav div .nav_links .nav_items {
+    padding-bottom: 1rem;
+    padding: 2rem;
+  }
+  nav div .nav_links .nav_items ul {
+    position: relative;
+  }
+}
+
+.nav_links.shows {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */
