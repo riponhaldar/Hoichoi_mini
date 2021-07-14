@@ -1,0 +1,41 @@
+@import './media';
+
+nav {
+	@include tab {
+		.nav_links {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -100%;
+			background: #000;
+			width: 100%;
+			height: 100vh;
+			padding: 8rem 2rem;
+			transition: 0.4s all ease-out;
+			.nav_items {
+				padding-bottom: 2rem;
+				font-weight: 700;
+				cursor: pointer;
+
+				ul {
+					left: 30px;
+					position: relative;
+				}
+			}
+		}
+	}
+	// mobile version
+	@include mobile {
+		.left_side {
+			.search {
+				display: none;
+			}
+		}
+	}
+}
+
+.nav_links.show {
+	z-index: 0;
+	left: 0;
+	transition: 0.4s all ease-out;
+}

@@ -1,3 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+@media screen and (max-width: 1200px) {
+  nav .nav_links {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    padding: 8rem 2rem;
+    -webkit-transition: 0.4s all ease-out;
+    transition: 0.4s all ease-out;
+  }
+  nav .nav_links .nav_items {
+    padding-bottom: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  nav .nav_links .nav_items ul {
+    left: 30px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 493px) {
+  nav .left_side .search {
+    display: none;
+  }
+}
+
+.nav_links.show {
+  z-index: 0;
+  left: 0;
+  -webkit-transition: 0.4s all ease-out;
+  transition: 0.4s all ease-out;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +56,18 @@ a {
   cursor: pointer;
 }
 
+.btn {
+  background: red;
+  padding: 0.3rem 0.9rem;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
 nav {
+  z-index: 222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,23 +81,7 @@ nav {
           align-items: center;
 }
 
-nav div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav div .logo {
-  padding-right: 5rem;
-}
-
-nav div .logo p {
-  font-size: 1.6rem;
-  color: red;
-  font-weight: bold;
-}
-
-nav div .nav_links {
+nav .nav_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,39 +90,94 @@ nav div .nav_links {
           align-items: center;
 }
 
-nav div .nav_links .nav_items {
-  padding-right: 1.8rem;
-  color: #fff;
-  font-weight: bold;
+nav .nav_container .toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  nav .nav_container .toggle {
+    display: block;
+  }
+}
+
+nav .nav_container .logo {
+  padding: 0 3rem;
+}
+
+nav .nav_container .logo img {
+  width: 130px;
+}
+
+@media screen and (max-width: 1200px) {
+  nav .nav_container .logo {
+    text-align: center;
+    padding: 0rem 1rem;
+  }
+  nav .nav_container .logo img {
+    width: 100px;
+  }
+}
+
+nav .left_side {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
+}
+
+nav .left_side .search {
+  font-size: 1.2rem;
+  padding-right: 1.3rem;
+}
+
+nav .left_side p {
+  padding-right: 1rem;
+}
+
+.nav_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav_links .nav_items {
+  padding-right: 1.4rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
-nav div .nav_links .nav_items a {
+.nav_links .nav_items a {
   color: #fff;
-}
-
-.nav_items {
-  position: relative;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 .nav_items ul {
-  display: none;
   position: absolute;
+  padding-top: 1rem;
+  display: none;
+  -webkit-transition: 0.7s all ease-in;
+  transition: 0.7s all ease-in;
 }
 
 .nav_items ul li {
-  padding: 0.8rem;
-  border-bottom: 1px solid #fff;
-  padding-top: 1rem;
-  background-color: #000;
-  cursor: pointer;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
+  background: #000;
+  padding: 0.8rem 0.6rem;
 }
 
 .nav_items ul li a {
-  color: #fff;
-  cursor: pointer;
+  font-size: 15px;
+}
+
+.nav_items i {
+  font-size: 1.2rem;
 }
 
 .nav_items:hover ul {
@@ -97,54 +185,9 @@ nav div .nav_links .nav_items a {
 }
 
 .nav_items:hover i {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.btn {
-  cursor: pointer;
-  color: #fff;
-  background: red;
-  padding: 0.2rem 0.8rem;
-  border-radius: 5px;
-  border: none;
-}
-
-.toggole {
-  display: none;
-}
-
-@media screen and (max-width: 993px) {
-  nav div .toggole {
-    z-index: 1;
-    display: block;
-    font-size: 1.5rem;
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    cursor: pointer;
-  }
-  nav div .nav_links {
-    height: 100%;
-    margin: 0;
-    width: 200px;
-    padding-top: 4rem;
-    background: #000;
-    position: absolute;
-    display: block;
-    display: none;
-  }
-  nav div .nav_links .nav_items {
-    padding-bottom: 1rem;
-    padding: 2rem;
-  }
-  nav div .nav_links .nav_items ul {
-    position: relative;
-  }
-}
-
-.nav_links.shows {
-  display: block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
 }
 /*# sourceMappingURL=main.css.map */
