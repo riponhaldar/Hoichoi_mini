@@ -3,6 +3,6 @@
 
 #only mobile ...screen ..
 :)
-# [Demo](https://hoichoi-mini.netlify.app/)
+# [Demo](https://hoichoi-just-try.netlify.app/)
 
  <!-- <img src='/result.jpg' alt='demo' /> -->
