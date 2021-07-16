@@ -183,8 +183,16 @@ header .slick-dots button {
   background-image: url("/Images/slides_images/5.jpg");
 }
 
-.Just_added {
-  margin: 1rem 0rem 0 0.8rem;
+@media screen and (max-width: 493px) {
+  .Just_added {
+    margin: 1rem 0rem 0 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Just_added {
+    margin: 1rem 0rem 0 0.5rem;
+  }
 }
 
 .Just_added .heding_name {
@@ -206,7 +214,7 @@ header .slick-dots button {
 }
 
 .Just_added .addedslide .conatainer_slide {
-  width: 100px !important;
+  width: 110px !important;
   height: 100%;
   display: block;
   overflow: hidden;
@@ -214,6 +222,12 @@ header .slick-dots button {
       -ms-flex-align: center;
           align-items: center;
   margin: 0.6rem;
+}
+
+@media screen and (max-width: 400px) {
+  .Just_added .addedslide .conatainer_slide {
+    width: 100px !important;
+  }
 }
 
 .Just_added .addedslide .conatainer_slide .conatainer_image {

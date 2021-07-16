@@ -32,7 +32,6 @@ $('.addedslide').slick({
 	slidesToScroll: 2,
 	nextArrow: $('.next1'),
 	prevArrow: $('.prev1'),
-
 	responsive: [
 		{
 			breakpoint: 1024,

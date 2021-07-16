@@ -8,3 +8,8 @@
 		@content;
 	}
 }
+@mixin mobilemini {
+	@media screen and (max-width: 400px) {
+		@content;
+	}
+}

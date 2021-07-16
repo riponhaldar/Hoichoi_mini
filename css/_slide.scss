@@ -106,7 +106,12 @@ header {
 // end slide
 .Just_added {
 	// margin-left: 0.5rem;
-	margin: 1rem 0rem 0 0.8rem;
+	@include mobile {
+		margin: 1rem 0rem 0 1rem;
+	}
+	@include mobilemini {
+		margin: 1rem 0rem 0 0.5rem;
+	}
 	.heding_name {
 		margin-right: 0.5rem;
 		border-bottom: 1px solid rgb(116, 116, 116);
@@ -121,19 +126,20 @@ header {
 	.addedslide {
 		// border: 1px solid red;
 		// margin: 1rem;
-
 		display: block;
 		// padding-left: 1rem;
 		// display: flex;
 		.conatainer_slide {
 			// width: 234px !important;
-			width: 100px !important;
+			width: 110px !important;
 			height: 100%;
-
 			display: block;
 			overflow: hidden;
 			align-items: center;
 			margin: 0.6rem;
+			@include mobilemini {
+				width: 100px !important;
+			}
 			.conatainer_image {
 				display: inline-block;
 				width: 100%;
