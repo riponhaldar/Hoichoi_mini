@@ -5,7 +5,6 @@ header {
 	width: 100%;
 	max-height: 580px;
 	position: relative;
-
 	.next {
 		position: absolute;
 		z-index: 1;
@@ -31,14 +30,14 @@ header {
 	.slide {
 		width: 100%;
 
-		img {
-			width: 100%;
-		}
+		// img {
+		// 	width: 100%;
+		// }
 	}
 	.slick-dots {
 		position: absolute;
 		bottom: 20px;
-		width: 100%s;
+		width: 100%;
 		justify-content: center;
 		display: flex;
 		width: 100%;
@@ -48,7 +47,7 @@ header {
 		text-align: center;
 		li {
 			// margin: 0 0.4rem;
-			background: rgba(255, 255, 255, 0.637);
+			background: rgba(255, 255, 255, 0.342);
 			border-radius: 50%;
 			// width: 1em;
 			// height: 1em;
@@ -63,7 +62,6 @@ header {
 			font-size: 0;
 			line-height: 0;
 			display: block;
-
 			padding: 0.5rem;
 			border-radius: 60%;
 			color: transparent;
@@ -74,7 +72,7 @@ header {
 	}
 }
 .slick-dots li.slick-active button {
-	background: #000;
+	background: rgb(255, 255, 255);
 }
 .single-item {
 	z-index: 0;
@@ -102,5 +100,96 @@ header {
 	}
 	.slide5 {
 		background-image: url('/Images/slides_images/5.jpg');
+	}
+}
+
+// end slide
+.Just_added {
+	// margin-left: 0.5rem;
+	margin: 1rem 0rem 0 0.8rem;
+	.heding_name {
+		margin-right: 0.5rem;
+		border-bottom: 1px solid rgb(116, 116, 116);
+		p {
+			text-transform: uppercase;
+			padding-left: 0.3rem;
+		}
+	}
+	.slide_btn {
+		display: none;
+	}
+	.addedslide {
+		// border: 1px solid red;
+		// margin: 1rem;
+
+		display: block;
+		// padding-left: 1rem;
+		// display: flex;
+		.conatainer_slide {
+			// width: 234px !important;
+			width: 100px !important;
+			height: 100%;
+
+			display: block;
+			overflow: hidden;
+			align-items: center;
+			margin: 0.6rem;
+			.conatainer_image {
+				display: inline-block;
+				width: 100%;
+				a {
+					display: block;
+					// padding: 5px;
+					text-decoration: none;
+					.title_conatiner {
+						color: #fff;
+						font-size: 0.8rem;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+.image_details {
+	padding-top: 148%;
+	position: relative;
+	width: 100%;
+	img {
+		display: block;
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+	.image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.details {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(58, 58, 58, 0.774);
+		color: #fff;
+		width: 100%;
+		height: 100%;
+		padding: 5px 8px 8px;
+		transition: transform 0.5s ease-in-out;
+		z-index: 1;
+	}
+	&:hover .details {
+		// transform: translateX(235px);
+		z-index: 3;
+		transition: transform 0.4s ease-in-out;
 	}
 }

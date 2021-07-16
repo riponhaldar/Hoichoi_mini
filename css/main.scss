@@ -10,7 +10,10 @@ $normarl_font: 'Open Sans', sans-serif;
 	margin: 0;
 	box-sizing: border-box;
 }
-
+body {
+	background: #000;
+	color: #fff;
+}
 ul {
 	list-style: none;
 }
@@ -100,6 +103,7 @@ nav {
 		position: absolute;
 		padding-top: 1rem;
 		display: none;
+		z-index: 3;
 		transition: 0.7s all ease-in;
 		li {
 			background: #000;
@@ -120,4 +124,37 @@ nav {
 		transform: rotate(180deg);
 		transition: 0.3s all ease-in;
 	}
+}
+
+// fotter staart
+.footer {
+	background: #000;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	.footer_container {
+		padding: 0.6rem 1rem;
+		width: 100%;
+		ul {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+
+			li {
+				display: block;
+				text-align: center;
+				font-size: 1.1rem;
+				font-family: sans-serif;
+				i {
+					color: #fff;
+				}
+				p {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+.active {
+	color: red !important;
 }
