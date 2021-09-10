@@ -211,10 +211,11 @@ header .slick-dots button {
 
 .Just_added .addedslide {
   display: block;
+  width: 100%;
 }
 
 .Just_added .addedslide .conatainer_slide {
-  width: 110px !important;
+  max-width: 234px !important;
   height: 100%;
   display: block;
   overflow: hidden;
@@ -226,7 +227,7 @@ header .slick-dots button {
 
 @media screen and (max-width: 400px) {
   .Just_added .addedslide .conatainer_slide {
-    width: 100px !important;
+    width: 110px !important;
   }
 }
 
